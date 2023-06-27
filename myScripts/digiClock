@@ -1,0 +1,25 @@
+conky.config = {
+  -- Conky settings
+  -- ...
+
+  -- Clock settings
+  alignment = 'top_right',
+  gap_x = 10,
+  gap_y = 10,
+  use_xft = true,
+  font = 'Iosevka Nerd Font Mono 132',
+  color1 = 'FFFFFF',
+  default_color = '000000',
+  default_outline_color = '000000',
+  draw_borders = true,
+  draw_outline = true,
+  draw_shades = false,
+  own_window = true,
+  own_window_type = 'override',
+  own_window_transparent = true,
+  own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+}
+
+conky.text = [[
+  ${color white}${time %H:%M:%S}${color}
+]]

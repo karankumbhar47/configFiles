@@ -21,22 +21,33 @@ settings:
           {hint-url}
         J: tab-prev
         K: tab-next
+        aDt: open -t https://gitlab.com/dwt1/dotfiles
+        adt: open -t https://gitlab.com/dwt1/dotfiles
+        agt: open -t https://github.com/karankumbhar47?tab=repositories
+        ar: open -t reddit.com
+        arn: open -t https://manpages.ubuntu.com/manpages/bionic/man1/ranger.1.html#commands
         aw: open -t https://archlinux.org/packages/
         chat: open -t https://chat.openai.com/
+        email: open -t https://mail.google.com/mail/u/0/#inbox
+        gh: open -t https://github.com/
+        git: open -t https://github.com/
+        mail: open -t https://mail.google.com/mail/u/0/#inbox
         re: open -t reddit.com
         yt: open -t https://www.youtube.com/
   colors.tabs.odd.bg:
     global: '#282c34'
   colors.tabs.selected.even.bg:
-    global: '#353b45'
+    global: black
   colors.tabs.selected.odd.bg:
-    global: '#353b45'
+    global: black
   colors.webpage.darkmode.enabled:
     global: true
   colors.webpage.preferred_color_scheme:
     global: dark
   content.autoplay:
     global: true
+  content.blocking.enabled:
+    global: false
   content.blocking.method:
     global: both
   url.default_page:

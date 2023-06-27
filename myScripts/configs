@@ -1,0 +1,86 @@
+#!/bin/bash
+
+# Define options
+options=(
+    "i3"
+    "status"
+    "conky"
+    "conkyMy"
+    "bash"
+    "history"
+    "vim"
+    "dmenu"
+    "feh"
+    "dunst"
+    "mpd"
+    "mpv"
+    "qute"
+    "ranger"
+    "picom"
+    "alacritty"
+    "sh"
+)
+
+# Specify the path to your rofi theme file
+theme_file="~/.config/rofi/launchers/type-4/style-2.rasi"
+
+# Prompt user to select an option using rofi with the specified theme
+selected_option=$(printf '%s\n' "${options[@]}" | rofi -dmenu -p "Select an Option:" -theme "$theme_file")
+
+# Execute corresponding command based on the selected option
+case "$selected_option" in
+    "i3")
+        nvim ~/.config/i3/config/*
+        ;;
+    "status")
+        nvim ~/.config/i3status/config
+        ;;
+    "conky")
+        nvim /usr/share/conky/
+        ;;
+    "conkyMy")
+        vim /usr/share/conky/myTheme/
+        ;;
+    "bash")
+        nvim ~/.bashrc
+        ;;
+    "history")
+        nvim ~/.bash_history
+        ;;
+    "vim")
+        nvim ~/.vimrc
+        ;;
+    "dmenu")
+        nvim ~/.dmenurc
+        ;;
+    "feh")
+        nvim ~/.fehbg
+        ;;
+    "dunst")
+        nvim ~/.config/dunst/dunstrc
+        ;;
+    "mpd")
+        nvim ~/.mpd/mpd.conf
+        ;;
+    "mpv")
+        nvim ~/.config/mpv/config
+        ;;
+    "qute")
+        nvim ~/.config/qutebrowser/config.py
+        ;;
+    "ranger")
+        nvim ~/.config/ranger/*
+        ;;
+    "picom")
+        nvim ~/.config/picom.conf
+        ;;
+    "alacritty")
+        nvim ~/.config/alacritty/alacritty.yml
+        ;;
+    "sh")
+        nvim ~/Templates/home/myScripts/*
+        ;;
+    *)
+        echo "Invalid option: $selected_option"
+        ;;
+esac

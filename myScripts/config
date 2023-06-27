@@ -1,0 +1,67 @@
+#!/bin/bash
+
+allArguments="$@"
+
+for arg in "$@"; do
+	
+case "$arg" in
+    "i3")
+	nvim ~/.config/i3/config
+        ;;
+    "status")
+	nvim ~/.config/i3status/config
+        ;;
+    "conky")
+	nvim /usr/share/conky/
+        ;;
+    "conkyMy")
+	vim /usr/share/conky/myTheme/
+        ;;
+    "bash")
+	nvim ~/.bashrc
+        ;;
+    "history")
+	nvim ~/.bash_history
+        ;;
+    "vim")
+	nvim ~/.vimrc
+        ;;
+    "dmenu")
+	nvim ~/.dmenurc
+        ;;
+    "feh")
+	nvim ~/.fehbg
+        ;;
+    "dunst")
+	nvim ~/.config/dunst/dunstrc
+        ;;
+    "mpd")
+	nvim ~/.mpd/mpd.conf
+        ;;
+    "mpv")
+	nvim ~/.config/mpv/config
+        ;;
+    "qute")
+	nvim ~/.config/qutebrowser/config.py
+        ;;
+    "ranger")
+	nvim ~/.config/ranger/*
+        ;;
+    "picom")
+	nvim ~/.config/picom.conf
+        ;;
+    "alacritty")
+	nvim ~/.config/alacritty/alacritty.yml
+        ;;  
+	"sh")
+	nvim ~/Templates/home/myScripts/*
+        ;;
+	*)
+  echo "Invalid option: $option"
+        ;;
+esac	
+
+	
+done
+
+

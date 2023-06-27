@@ -1,0 +1,27 @@
+# error about audio also for bluetooth also reboot after that
+systemctl --user start pipewire.service 
+https://forum.manjaro.org/t/no-sound-in-i3-fresh-installation/124524
+
+# in garuda linux not giving permission to execute shell script even after applying chmod
+https://unix.stackexchange.com/questions/151867/running-sh-script-permission-denied-despite-the-executable-bit-and-root-right
+
+
+#this will solve bluetooth error of arch 
+#just install pulseaudio-bluetooth and reboot pc
+sudo pacman -S pulseaudio-bluetooth
+
+# no locale support
+# put all this content of locale.conf 
+# /etc/locale.conf
+#     LANG=en_IN.UTF-8
+#     LC_ADDRESS=en_IN.UTF-8
+#     LC_IDENTIFICATION=en_IN.UTF-8
+#     LC_MEASUREMENT=en_IN.UTF-8
+#     LC_MONETARY=en_IN.UTF-8
+#     LC_NAME=en_IN.UTF-8
+#     LC_NUMERIC=en_IN.UTF-8
+#     LC_PAPER=en_IN.UTF-8
+#     LC_TELEPHONE=en_IN.UTF-8
+#     LC_TIME=en_IN.UTF-8
+
+# 

@@ -205,8 +205,10 @@ c.colors.tabs.odd.bg = '#100520'
 c.colors.tabs.even.bg = '#100520'
 c.colors.tabs.selected.odd.fg = '#301560'
 c.colors.tabs.selected.even.fg = '#301560'
-c.colors.tabs.selected.odd.bg = '#e7a927'
-c.colors.tabs.selected.even.bg = '#e7a927'
+#c.colors.tabs.selected.odd.bg = '#e7a927'
+#c.colors.tabs.selected.odd.bg = '#e7a927'
+c.colors.tabs.selected.odd.bg = 'black'
+c.colors.tabs.selected.even.bg = '#000000'
 c.tabs.padding = {"bottom": 2, "left": 5, "right": 5, "top":2}
 
 c.completion.scrollbar.padding = 1

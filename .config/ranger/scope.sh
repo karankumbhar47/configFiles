@@ -123,7 +123,7 @@ esac
 ###########################################
 set preview_images true
 set preview_images_method  ueberzug 
-
+set display_size_in_status_bar true
 
 
 
