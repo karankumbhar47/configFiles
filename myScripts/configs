@@ -30,16 +30,16 @@ selected_option=$(printf '%s\n' "${options[@]}" | rofi -dmenu -p "Select an Opti
 # Execute corresponding command based on the selected option
 case "$selected_option" in
     "i3")
-        nvim ~/.config/i3/config/*
+        nvim ~/.config/i3/*
         ;;
     "status")
         nvim ~/.config/i3status/config
         ;;
     "conky")
-        nvim /usr/share/conky/
+        nvim /usr/share/conky/*
         ;;
     "conkyMy")
-        vim /usr/share/conky/myTheme/
+        vim /usr/share/conky/myTheme/*
         ;;
     "bash")
         nvim ~/.bashrc
@@ -75,7 +75,7 @@ case "$selected_option" in
         nvim ~/.config/picom.conf
         ;;
     "alacritty")
-        nvim ~/.config/alacritty/alacritty.yml
+        nvim ~/.config/alacritty/alacritty.toml
         ;;
     "sh")
         nvim ~/Templates/home/myScripts/*

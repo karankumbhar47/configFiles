@@ -1,154 +1,20 @@
 bindsym Print exec --no-startup-id i3-scrot
 
 
-bindsym  $mod+Shift+a               exec --no-startup-id android-studio
-bindsym  $mod+Shift+b               exec --no-startup-id brave
-bindsym  $mod+Shift+c               exec alacritty -e ~/.myScripts/configs
-bindsym  $mod+Shift+d     --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym  $mod+Shift+e               exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-bindsym  $mod+Shift+f               exec alacritty -e ranger
-#bindsym $mod+Shift+g               mode "$mode_gaps"
-bindsym  $mod+Shift+h               move left
-bindsym  $mod+Shift+i               exec --no-startup-id intellij-idea-community
-bindsym  $mod+Shift+j               move down 
-bindsym  $mod+Shift+k               move up 
-bindsym  $mod+Shift+l               move right 
-bindsym  $mod+Shift+m               exec alacritty -e ~/.myScripts/searchMusic.sh
-bindsym  $mod+Shift+o               exec qutebrowser
-bindsym  $mod+Shift+p               exec pcmanfm  
-bindsym  $mod+Shift+q               kill 
-bindsym  $mod+Shift+r               restart
-bindsym  $mod+Shift+s               sticky toggle
-#bindsym $mod+Shift+t               exec --no-startup-id conky -c ~/.myScripts/conkyTimeShow
-#bindsym $mod+Shift+u               exec --no-startup-id 
-bindsym  $mod+Shift+v               split h;exec notify-send 'tile horizontally'
-bindsym  $mod+Shift+w               exec --no-startup-id whatsdesk
 
-# Move to workspace with focused container
-bindsym  $mod+Shift+1               move container to workspace $ws1; workspace $ws1
-bindsym  $mod+Shift+2               move container to workspace $ws2; workspace $ws2
-bindsym  $mod+Shift+3               move container to workspace $ws3; workspace $ws3
-bindsym  $mod+Shift+4               move container to workspace $ws4; workspace $ws4
-bindsym  $mod+Shift+5               move container to workspace $ws5; workspace $ws5
-bindsym  $mod+Shift+6               move container to workspace $ws6; workspace $ws6
-bindsym  $mod+Shift+7               move container to workspace $ws7; workspace $ws7
-bindsym  $mod+Shift+8               move container to workspace $ws8; workspace $ws8
-bindsym  $mod+Shift+9               move container to workspace $ws9; workspace $ws9
-bindsym  $mod+Shift+0               move container to workspace $ws0; workspace $ws0
-
-bindsym  $mod+Shift+Return          exec --no-startup-id vlc ~/Videos/courses/AndroidDevlopment\(CWH\)/
-bindsym  $mod+Shift+space           floating toggle
-bindsym  $mod+Shift+minus           move scratchpad
-bindsym  $mod+Shift+semicolon       move right
-bindsym  $mod+Shift+Left            move left
-bindsym  $mod+Shift+Down            move down
-bindsym  $mod+Shift+Up              move up
-bindsym  $mod+Shift+Right           move right
-
-bindsym  $mod+Shift+F3              exec pcmanfm_pkexec
-bindsym  $mod+Shift+F4              mode "$mode_system"
-bindsym  $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
-#bindsym $mod+Shift+a               exec pgrep -x volumeicon >/dev/null && killall volumeicon || volumeicon  
-#bindsym $mod+Shift+b               exec pgrep -x bleuman-tray >/dev/null && killall blueman-tray || blueman-tray
-#bindsym $mod+Shift+c               exec conf
-#bindsym $mod1+Shift+t              exec --no-startup-id alacritty -e  i3-scratchpad  -d1920x200 -abr -p0,-32 -wtu nvim ~/Templates/todo.md  
-
-
-bindsym  $alt+Shift+a exec          alacritty -e 'alsamixer'
-bindsym  $alt+Shift+b exec          --no-startup-id blueman-manager
-bindsym  $alt+Shift+c exec          --no-startup-id google-chrome-stable
-bindsym  $alt+Shift+g exec          --no-startup-id gtop
-bindsym  $alt+Shift+h exec          xdg-open /usr/share/doc/manjaro/i3_help.pdf
-bindsym  $alt+Shift+i exec          --no-startup-id i3-scratchpad -d1920x400 -abr alacritty -e  nvim ~/.myScripts/installationScript.sh ~/.myScripts/errorSolving
-bindsym  $alt+Shift+o exec          --no-startup-id opera 
-bindsym  $alt+Shift+l exec          --no-startup-id blurlock
-bindsym  $alt+Shift+m exec          --no-startup-id vlc
-bindsym  $alt+Shift+p exec          --no-startup-id xfce4-power-manager-settings
-bindsym  $alt+Shift+t exec          --no-startup-id i3-scratchpad -d1920x400 -abr alacritty -e  nvim ~/.myScripts/todo.md 
-bindsym  $alt+Shift+w exec          --no-startup-id nm-connection-editor 
-bindsym  $alt+Shift+v exec          --no-startup-id code 
-
-bindsym  $mod+Ctrl+b                exec alacritty -e 'bmenu'
-bindsym  $mod+Ctrl+s                layout stacking
-bindsym  $mod+Ctrl+t                exec --no-startup-id picom -b
-bindsym  $mod+Ctrl+x      --release exec --no-startup-id xkill
-
-# Move focused container to workspace
-bindsym  $mod+Ctrl+1                move container to workspace $ws1
-bindsym  $mod+Ctrl+2                move container to workspace $ws2
-bindsym  $mod+Ctrl+3                move container to workspace $ws3
-bindsym  $mod+Ctrl+4                move container to workspace $ws4
-bindsym  $mod+Ctrl+5                move container to workspace $ws5
-bindsym  $mod+Ctrl+6                move container to workspace $ws6
-bindsym  $mod+Ctrl+7                move container to workspace $ws7
-bindsym  $mod+Ctrl+8                move container to workspace $ws8
-bindsym  $mod+Ctrl+9                move container to workspace $ws9
-bindsym  $mod+Ctrl+0                move container to workspace $ws0
-
-bindsym  $mod+Ctrl+Right             workspace next
-bindsym  $mod+Ctrl+Left             workspace prev
-#bindsym $mod+Ctrl+d                exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=8'"
-
-
-bindsym  $mod+d                     exec --no-startup-id dmenu_recency
-bindsym  $mod+e                     layout toggle split
-bindsym  $mod+f                     fullscreen toggle
-bindsym  $mod+h                     focus left
-bindsym  $mod+j                     focus down 
-bindsym  $mod+k                     focus up
-bindsym  $mod+l                     focus right 
-bindsym  $mod+m                     bar mode toggle
-bindsym  $mod+q                     split toggle
-bindsym  $mod+r                     mode "resize"
-bindsym  $mod+s                     exec rofi -show drun
-bindsym  $mod+t                     exec --no-startup-id pkill picom
-bindsym  $mod+v                     split v;exec notify-send 'tile vertically'
-bindsym  $mod+w                     layout tabbed
-bindsym  $mod+z                     exec --no-startup-id morc_menu
-
-# switch to workspace
-bindsym  $mod+1                     workspace $ws1
-bindsym  $mod+2                     workspace $ws2
-bindsym  $mod+3                     workspace $ws3
-bindsym  $mod+4                     workspace $ws4
-bindsym  $mod+5                     workspace $ws5
-bindsym  $mod+6                     workspace $ws6
-bindsym  $mod+7                     workspace $ws7
-bindsym  $mod+8                     workspace $ws8
-bindsym  $mod+9                     workspace $ws9
-bindsym  $mod+0                     workspace $ws0
-
-
-bindsym  $mod+Return                exec alacritty
-bindsym  $mod+space                 focus mode_toggle
-bindsym  $mod+minus                 scratchpad show
-bindsym  $mod+semicolon             focus right
-bindsym  $mod+Left                  focus left
-bindsym  $mod+Down                  focus down
-bindsym  $mod+Up                    focus up
-bindsym  $mod+Right                 focus right
-
-bindsym  $mod+F3                    exec pcmanfm
-bindsym  $mod+F5                    exec alacritty -e 'mocp'
-bindsym  $mod+Print       --release exec --no-startup-id i3-scrot -w
-
-#bindsym $mod+a                     focus parent
-#bindsym $mod+d                     exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 8'
-#bindsym $mod+d                     exec --no-startup-id dmenu_run
-#bindsym $mod+F2                    exec palemoon
-#bindsym $mod+F3                    exec ranger
 
 #change volume
+bindsym XF86Calculator              exec --no-startup-id gnome-calculator
 bindsym  XF86AudioRaiseVolume       exec amixer -q set Master 5%+
 bindsym  XF86AudioLowerVolume       exec amixer -q set Master 5%-
 bindsym  XF86AudioMute              exec amixer set Master toggle
 bindsym  XF86MonBrightnessUp        exec "xbacklight -inc 10; notify-send 'brightness up'"
 bindsym  XF86MonBrightnessDown      exec "xbacklight -dec 10; notify-send 'brightness down'"
-bindsym  XF86AudioNext              exec mocp next
 bindsym  XF86AudioPrev              exec mocp prev
 #bindsym XF86AudioPlay              exec mpc toggle
-#bindsym XF86AudioStop              exec mopc stop
+bindsym XF86AudioStop              exec mopc stop
 bindsym  XF86AudioPlay              exec mocp --toggle-pause
 #bindsym XF86AudioPlay              exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.vlc /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause  
+
 
 

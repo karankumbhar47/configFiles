@@ -1,3 +1,12 @@
+###############################################################################################
+#                                    ####################                                     #
+#                                    #                  #                                     #
+######################################    My i3Config   # ##################################### 
+#                                    #                  #                                     #
+#                                    ####################                                     #
+###############################################################################################
+
+
 # Autostart applications
 exec        --no-startup-id     feh  --bg-fill  ~/Pictures/wallpapers/win11_dark.jpg
 exec        --no-startup-id     xsettingsd &
@@ -16,33 +25,33 @@ exec        --no-startup-id     xautolock -time 10 -locker blurlock
 exec_always --no-startup-id     ff-theme-util
 exec_always --no-startup-id     fix_xcursor
 
-
 # setting variables
 default_border                  pixel 2 
 default_floating_border         normal
 hide_edge_borders               none
 floating_modifier               $mod
-font                            pango: Noto Sans 8 xft:URWGothic-Book 11
+font                            pango: Noto Sans 8 xft:URWGothic-Book 11 pango:JetBrainsMono Nerd Font Propo,JfontAwesome 11,etBrainsMono NFP SemiBold 11  
 workspace_auto_back_and_forth   yes
 
 #setting variables names 
-set $mod Mod4
-set $alt Mod1
-set $ws1 1
-set $ws2 2
-set $ws3 3
-set $ws4 4
-set $ws5 5
-set $ws6 6
-set $ws7 7
-set $ws8 8
-set $ws9 9
-set $ws0 0
+set   $mod    Mod4
+set   $alt    Mod1
 
+set   $ws0    "0:0  "
+set   $ws1    "1:1  "
+set   $ws2    "2:2  " 
+set   $ws3    "3:3  "
+set   $ws4    "4:4  "
+set   $ws5    "5:5 "
+set   $ws6    "6:6  "
+set   $ws7    "7:7  "
+set   $ws8    "8:8  "
+set   $ws9    "9:9  "
+set   $ws10  "10:    "
 
 for_window [class="Alacritty:Floating"]           floating enable
-for_window [class="Alacritty:Floating"]           move position 0px 568px
-for_window [class="Alacritty:Floating"]           resize set 1366 200
+for_window [class="Alacritty:Floating"]           move position 540px 568px
+for_window [class="Alacritty:Floating"]           resize set 540 400
 
 for_window [class="Alacritty:Reading"]            floating enable
 for_window [class="Alacritty:Reading"]            move scratchpad
@@ -54,7 +63,11 @@ for_window [class="Alacritty:Notepad"]            move scratchpad
 for_window [class="Alacritty:Notepad"]            move position 0px 518px
 for_window [class="Alacritty:Notepad"]            resize set 1366 250
 
-for_window [title="alsamixer"]                    floating enable border pixel 1
+
+for_window [class="gnome-calculator"]             floating enable sticky enable border normal
+for_window [class="gnome-calculator"]             move position 1540px 505px  
+
+for_window [title="alsamixer"]                    floating enable border pixe1
 for_window [class="calamares"]                    floating enable border normal
 for_window [class="Clipgrab"]                     floating enable
 for_window [title="File Transfer*"]               floating enable
@@ -84,47 +97,48 @@ for_window [class="Xfburn"]                       floating enable
 for_window [urgent=latest]                        focus
 
 # Open specific applications in floating mode
-assign     [class="qutebrowser"]                  $ws2
-assign     [class="firefox"]                      $ws2
-assign     [class="whatsdesk"]                    $ws4
+assign     [class="qutebrowser"]                  $ws3
+
+assign     [class="firefox"]                      $ws3
+assign     [class="whatsdesk"]                    $ws8
 assign     [class="Brave"]                        $ws3
-assign     [title="gtop"]                         $ws0
+assign     [title="bashtop"]                      $ws0
 assign     [title="irssi"]                        $ws8
 
 
 #bindsym $mod+Shift+F4  mode "$mode_system"
 set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym s exec --no-startup-id i3exit suspend, mode "default"
-    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
-    bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-    bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym Shift+s exec  --no-startup-id shutdown now, "default"
 
-    # exit system mode: "Enter" or "Escape"
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+bindsym    l        exec       --no-startup-id    i3exit lock,        mode "default"
+bindsym    s        exec       --no-startup-id    i3exit suspend,     mode "default"
+bindsym    u        exec       --no-startup-id    i3exit switch_user, mode "default"
+bindsym    e        exec       --no-startup-id    i3exit logout,      mode "default"
+bindsym    h        exec       --no-startup-id    i3exit hibernate,   mode "default"
+bindsym    r        exec       --no-startup-id    i3exit reboot,      mode "default"
+bindsym    Shift+s  exec       --no-startup-id    shutdown now,       mode "default"
+
+# exit system mode: "Enter" or "Escape"
+bindsym    Return                                                     mode "default"
+bindsym    Escape                                                     mode "default"
 }
 
-# Resize window (you can also use the mouse for that)
-#bindsym $mod+r mode "resize"
+
 mode "resize" {
-        bindsym h resize shrink width 5 px or 5 ppt
-        bindsym j resize grow height 5 px or 5 ppt
-        bindsym k resize shrink height 5 px or 5 ppt
-        bindsym l resize grow width 5 px or 5 ppt
+bindsym    l                 resize shrink width  5 px or 5 ppt
+bindsym    k                 resize grow height   5 px or 5 ppt
+bindsym    j                 resize shrink height 5 px or 5 ppt
+bindsym    h                 resize grow width    5 px or 5 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+# same b   indings, but for the arrow keys
+bindsym    Left             resize shrink width   10 px or 10 ppt
+bindsym    Down             resize grow height    10 px or 10 ppt
+bindsym    Up               resize shrink height  10 px or 10 ppt
+bindsym    Right            resize grow width     10 px or 10 ppt
 
-        # exit resize mode: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+# exit r   esize mode: Enter or Escape
+bindsym    Return           mode                  "default"
+bindsym    Escape           mode                  "default"
 }
 
 
@@ -132,11 +146,15 @@ mode "resize" {
 ##################################################################################################
 
 # Includes
-include ~/.config/i3/keybindings
-include ~/.config/i3/layout
-include ~/.config/i3/gaps
-include ~/.config/i3/i3bar
-include ~/.config/i3/colors
+include   ~/.config/i3/keybindings
+include   ~/.config/i3/modKeybinding
+include   ~/.config/i3/modShiftKeybinding
+include   ~/.config/i3/altShiftKeybinding
+include   ~/.config/i3/modCtrlKeybinding
+include   ~/.config/i3/layout
+include   ~/.config/i3/gaps
+include   ~/.config/i3/i3bar
+include   ~/.config/i3/colors
 
 
 ##################################################################################################
@@ -171,6 +189,7 @@ include ~/.config/i3/colors
 
 #bindsym $mod+b workspace back_and_forth
 #bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
+#exec_always --no-startup-id     exec i3-workspace-names-daemon
 
 ## change container layout (stacked, tabbed, toggle split)
 #bindsym $mod+Ctrl+s layout stacking

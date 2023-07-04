@@ -12,7 +12,7 @@ with open(jsonPath) as json_file:
     file_data = json.load(json_file)
 
 
-path = os.path.join(coursePath, "course3")
+path = os.path.join(coursePath, "courseName")
 os.makedirs(path, exist_ok=True)  # Create the directory if it doesn't exist
 
 ## Sort the file data based on the index
@@ -41,14 +41,19 @@ os.makedirs(path, exist_ok=True)  # Create the directory if it doesn't exist
 for item in file_data:
     for key, value in item.items():
         try:
+            print(key,value,item)
             old_file_name = value 
             old_file_name = os.path.join(coursePath,old_file_name)
             new_file_name = f'{key}_{value}'
             new_file_name = os.path.join(path,new_file_name)
-            print(old_file_name,"==>",new_file_name)
-            os.rename(old_file_name, new_file_name)     
+            #print(old_file_name,"==>",new_file_name)
+            print(old_file_name)
+            print(new_file_name)
+            #os.rename(old_file_name, new_file_name)     
         except Exception as e:
             print(e) 
+            print(key)
+            #print(value,end="\n")
         #print(key,value)
         #filename = value
         #new_filename = f"{key}_{filename}"

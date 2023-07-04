@@ -1,54 +1,42 @@
-[ ] use powerline for terminal and vim
-[ ] fileTransfer in manjaro(android)
-[ ] graphical clock
-[ ] nvchad preview markdown 
-[ ] nvchad method suggestion
-[x] push changes to github
-[ ] play and pause button of youtube and music
-[ ] calculater like gnome or windows
-[ ] make login screen like windows
-[ ] put icon or folder on desktop
-[ ] multiple argument in sctl script
-[ ] shutdown script 
-[ ] network and bluetooth start script
-[ ] mpv keybinding as vlc
-[ ] vim keybinding in idea editor
-[ ] naming playlist as vlc order
-[ ] ranger file frequently opener
-[ ] using polybar and make a status bar like windows 
-[ ] make script of systemctl
-[ ] using rofi modify shutdown menu 
-[ ] rofi - sound
-[ ] rofi - music
-[ ] rofi  - all themes 
-[ ] nvim autosave
--[ ] github project
+-[ ] gparted
+-[ ] add gdu and 
+-[ ] time show shortcut
+-[ ] monkeytype shortcut
+-[ ] use powerline for terminal and vim
+-[ ] fileTransfer in manjaro(android)
+-[ ] graphical clock
+-[ ] nvchad preview markdown 
+-[ ] nvchad method suggestion
+-[x] push changes to github
+-[ ] play and pause button of youtube and music
+-[ ] calculater like gnome or windows
+-[ ] make login screen like windows
+-[ ] put icon or folder on desktop
+-[ ] multiple argument in sctl script
+-[ ] shutdown script 
+-[ ] network and bluetooth start script
+-[ ] mpv keybinding as vlc
+-[ ] vim keybinding in idea editor
+-[ ] naming playlist as vlc order
+-[ ] ranger file frequently opener
+-[ ] using polybar and make a status bar like windows 
+-[ ] make script of systemctl
+-[ ] using rofi modify shutdown menu 
+-[ ] rofi - sound
+-[ ] rofi - music
+-[ ] rofi  - all themes 
+-[ ] nvim autosave
+-[x] github project
 -[x] scratchpad
--[x] wallpaper scirpt debug
 -[x] wallpaper on startup
--[x] assigning of each application in spicific window
+-[ ] assigning of each application in spicific window
 -[x] font rendering
--[x] brightness adujustment
+-[ ] brightness adujustment
 -[ ] laptop sleep
 -[ ] laptop overcharging
 -[ ] laptop lesscharging
--[ ] battery down and full charged notification
--[x] bluetooth problem
--[x] bluetooth icon
--[x] battery icon
--[ ] put icon instead name
--[x] tranperency 
--[x] arch logo
--[x] Bluetooth
--[x] wifi
--[x] startup application
--[x] battery notification
--[x] shortcut for configuration files
--[x] shortcut for nvim
--[x] shortcut of nvChad
+-[x] battery down and full charged notification
 -[ ] randomly add plugins to nvchad
--[x] gitGraph
-
 
 
 ## Important links
@@ -88,13 +76,9 @@ Triks :-
     ls -a -R ../sem\ IV/*
 
 ## Download at night
-[x] send photos
-[x] download windows iso
-[ ] download android courses
-[x] start android studio
-[x] android studio virtual devise
-[ ] download udemy course
-
+[ ] downlaod 217 course 
+[ ] download gtk
+[ ] bramashra
 
 ## Task after internShip
 [ ] upgrade ram

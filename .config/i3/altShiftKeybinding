@@ -1,0 +1,18 @@
+bindsym  $alt+Shift+a               exec --no-startup-id android-studio
+bindsym  $alt+Shift+b               exec --no-startup-id brave
+bindsym  $alt+Shift+c               exec --no-startup-id google-chrome-stable
+bindsym  $alt+Shift+f               exec --no-startup-id pcmanfm     
+bindsym  $alt+Shift+g               exec --no-startup-id gtop
+#bindsym $alt+Shift+h               
+bindsym  $alt+Shift+i               exec --no-startup-id intellij-idea-community
+#bindsym  $alt+Shift+l                
+bindsym  $alt+Shift+m               exec --no-startup-id alacritty -e 'mocp'
+bindsym  $alt+Shift+o               exec --no-startup-id opera 
+bindsym  $alt+Shift+p               exec pcmanfm  
+bindsym  $alt+Shift+q               exec --no-startup-id qutebrowser
+bindsym  $alt+Shift+r               exec --no-startup-id alacritty -e ranger
+bindsym  $alt+Shift+w               exec --no-startup-id whatsdesk
+bindsym  $alt+Shift+v               exec --no-startup-id code 
+bindsym  $alt+Shift+y               exec --no-startup-id vlc
+
+

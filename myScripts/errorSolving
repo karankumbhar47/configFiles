@@ -24,4 +24,71 @@ sudo pacman -S pulseaudio-bluetooth
 #     LC_TELEPHONE=en_IN.UTF-8
 #     LC_TIME=en_IN.UTF-8
 
-# 
+# to get all keyName of i3keyconfig
+xmodmap -pke
+
+# to solve error not enough space to hibernate
+# https://www.archlinuxuser.com/2013/01/how-to-create-swap-partition-on.html
+sudo swapon /dev/sda5
+# add entry to /etc/fstab
+/dev/sda2 none swap defaults 0 0 
+
+## keycodes
+#https://wiki.archlinux.org/title/Keyboard_input
+# their are two types of keycodes 
+1] linux keycodes and 2] xorg keycodes
+xorgKeycodes = linuxKeycodes + 8
+# to get xorg keycodes use "xmodmap -pke"
+# to get live keycode when you pressed 
+  1] keyboard connected by use cable
+  $ sudo evtest
+     # select event according to devise
+     # then type any key you will get linux keycode 
+     # just add 8 to it 
+     # you will get xorg keycode
+     # you can use this keycode name in i3 config
+  2] inbuilt keyboard
+   - using virtual console(tty)
+     # login to tty 
+     # type command 
+     $ showkey --keycodes
+     # press any key you will get some code
+  3] better to use xorg-xev
+     xorg-xev
+      #press any key this will show xorgKeycodes
+      #you can press any key from inbuilt or usb Keyboard 
+      #keep in mind that your cursor should be inside white screeen
+    - directly use command
+     xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
+     here i came to know fn+F5 of inbuilt keyboard not modified
+     also fn+F9 of inbuilt keyboard has no bingidig
+     also fn+f8 of inbuilt keyboard has two keys Alt_l+p
+     also here they called alt key as super key
+     also called window/super key as Alt_l
+
+
+# connect android to arch
+https://linuxhint.com/connect-android-arch-linux/
+
+# to know time to boot
+systemd-analyze
+# time taken by service
+systemd-analyze blame
+
+# to solve android-studio duplicate class error
+# https://youtrack.jetbrains.com/issue/KT-54136/Duplicated-classes-cause-build-failure-if-a-dependency-to-kotlin-stdlib-specified-in-an-android-project
+# add following content to gradle.properties
+#     dependencies {
+#         constraints {
+#             implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0") {
+#                 because("kotlin-stdlib-jdk7 is now a part of kotlin-stdlib")
+#             }
+#             implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0") {
+#                 because("kotlin-stdlib-jdk8 is now a part of kotlin-stdlib")
+#             }
+#         }
+#     }
+
+
+### copying file with ssh
+

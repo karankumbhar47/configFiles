@@ -1,0 +1,82 @@
+#bindsym $mod+a                     
+#bindsym $mod+b                     
+#bindsym $mod+c                     
+bindsym  $mod+d                     exec --no-startup-id dmenu_recency
+bindsym  $mod+e                     layout toggle split
+bindsym  $mod+f                     fullscreen toggle
+#bindsym $mod+g                     
+bindsym  $mod+h                     focus left
+#bindsym $mod+i                     
+bindsym  $mod+j                     focus down 
+bindsym  $mod+k                     focus up
+bindsym  $mod+l                     focus right 
+bindsym  $mod+m                     bar mode toggle
+#bindsym $mod+n                     
+#bindsym $mod+o                     
+#bindsym $mod+p                     
+bindsym  $mod+q                     split toggle
+bindsym  $mod+r                     mode "resize"
+bindsym  $mod+s                     exec rofi -show drun
+bindsym  $mod+t                     exec --no-startup-id pkill picom
+#bindsym $mod+u                     
+bindsym  $mod+v                     split v;exec notify-send 'tile vertically'
+bindsym  $mod+w                     layout tabbed
+#bindsym $mod+x                     
+#bindsym $mod+y                     
+bindsym  $mod+z                     exec --no-startup-id morc_menu
+
+# switch to workspace
+bindsym  $mod+1                     workspace $ws1
+bindsym  $mod+2                     workspace $ws2
+bindsym  $mod+3                     workspace $ws3
+bindsym  $mod+4                     workspace $ws4
+bindsym  $mod+5                     workspace $ws5
+bindsym  $mod+6                     workspace $ws6
+bindsym  $mod+7                     workspace $ws7
+bindsym  $mod+8                     workspace $ws8
+bindsym  $mod+9                     workspace $ws9
+bindsym  $mod+0                     workspace $ws0
+
+
+#bindsym $mod+Escape         
+bindsym  $mod+minus                 scratchpad show
+#bindsym $mod+plus             
+bindsym  $mod+BackSpace           [class="^Alacritty:Reading$"] scratchpad show
+#bindsym $mod+Tab                     
+#bindsym $mod+braceleft       
+#bindsym $mod+braceright       
+#bindsym $mod+bar 
+#bindsym $mod+colon          
+#bindsym $mod+quotedbl          
+bindsym  $mod+Return                exec alacritty
+#bindsym $mod+less          
+#bindsym $mod+greater          
+#bindsym $mod+question          
+bindsym  $mod+space                 focus mode_toggle
+bindsym  $mod+Left                  focus left
+bindsym  $mod+Down                  focus down
+bindsym  $mod+Up                    focus up
+bindsym  $mod+Right                 focus right
+
+#bindsym $mod+F1               
+#bindsym $mod+F2              
+#bindsym  $mod+F3          
+#bindsym  $mod+F4         
+bindsym  $mod+F5                    exec alacritty -e 'mocp'
+#bindsym $mod+F6              
+#bindsym $mod+F7              
+#bindsym $mod+F8              
+#bindsym $mod+F9              
+#bindsym $mod+F10             
+#bindsym $mod+F11             
+#bindsym $mod+F12             
+
+
+bindsym  $mod+Print       --release exec --no-startup-id i3-scrot -w
+
+#bindsym $mod+a                     focus parent
+#bindsym $mod+d                     exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 8'
+#bindsym $mod+d                     exec --no-startup-id dmenu_run
+#bindsym $mod+F2                    exec palemoon
+#bindsym $mod+F3                    exec ranger
+

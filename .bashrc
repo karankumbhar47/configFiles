@@ -103,7 +103,7 @@ xhost +local:root > /dev/null 2>&1
 ##############################
 
 export EDITOR=nvim;
-export VISUAL=nvim;
+export VISUAL="alacritty --class \"Alacritty:Floating\" -e nvim";
 export TERMINAL=alacritty;
 alias c="clear"
 #alias ls="ls -l --color"
@@ -146,6 +146,7 @@ PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 ##############################
 
 #[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+#
 
 
 
@@ -161,7 +162,7 @@ PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
 ### EXPORT
 export TERM="xterm-256color"                      # getting proper colors
-#export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
+export HISTCONTROL=ignoredups:erasedups           # no duplicate entries
 #export ALTERNATE_EDITOR=""                        # setting for emacsclient
 #export EDITOR="emacsclient -t -a ''"              # $EDITOR use Emacs in terminal
 #export VISUAL="emacsclient -c -a emacs"           # $VISUAL use Emacs in GUI mode
@@ -245,7 +246,7 @@ shopt -s autocd # change to named directory
 shopt -s cdspell # autocorrects cd misspellings
 shopt -s cmdhist # save multi-line commands in history as single line
 shopt -s dotglob
-shopt -s histappend # do not overwrite history
+#shopt -s histappend # do not overwrite history
 shopt -s expand_aliases # expand aliases
 shopt -s checkwinsize # checks term size when bash regains control
 
@@ -337,6 +338,7 @@ alias pacs='sudo pacman -S'
 alias pacr='sudo pacman -R'
 alias pacss='pacman -Ss'
 alias yays='yay -S'
+alias yayss='yay -Ss'
 alias unlock='sudo rm /var/lib/pacman/db.lck'    # remove pacman lock
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # remove orphaned packages
 
@@ -416,7 +418,7 @@ alias yta-opus="yt-dlp --extract-audio --audio-format opus "
 alias yta-vorbis="yt-dlp --extract-audio --audio-format vorbis "
 alias yta-wav="yt-dlp --extract-audio --audio-format wav "
 alias ytv-best="yt-dlp -f bestvideo+bestaudio "
-alias ytb="yt-dlp --format 'bestvideo+bestaudio/best' --write-auto-sub --sub-lang en --output '%(title)s.%(ext)s' --ignore-errors"
+alias ytb="yt-dlp --format 'bestvideo+bestaudio/best' --write-auto-sub --sub-lang en --ignore-errors --output '%(title)s.%(ext)s' "
 
 # switch between shells
 # I do not recommend switching default SHELL from bash.
@@ -485,7 +487,7 @@ esac
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
-#HISTCONTROL=ignoreboth
+HISTCONTROL=ignoreboth
 
 
 # check the window size after each command and, if necessary,

@@ -10,16 +10,17 @@ bar {
 
 	bindsym button4 nop
 	#bindsym button5 nop
-  font xft:URWGothic-Book 11
+  font  xft:URWGothic-Book 11,JetBrainsMono Nerd Font 12,fontAwesome 11.5
   #font xft:JetBrainsMono Nerd Font  11 
 	strip_workspace_numbers yes
 
     colors {
         background #222D31
+        #background #200033
         statusline #F9FAF9
         separator  #454947
 
-#                      border  backgr. text
+#                          border  backgr. text
         focused_workspace  #F9FAF9 #16a085 #292F34
        #active_workspace   #595B5B #353836 #FDF6E3
         active_workspace   #db2d16 #353836 #FDF6E3
